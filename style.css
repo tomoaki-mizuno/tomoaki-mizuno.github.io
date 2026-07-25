@@ -59,7 +59,7 @@ a:focus-visible { outline: 2px solid var(--eeg); outline-offset: 3px; border-rad
 }
 .sig-ch {
   fill: none; stroke: url(#fade); stroke-width: 1.7; stroke-linecap: round;
-  stroke-dasharray: 1400; stroke-dashoffset: 1400;
+  stroke-dasharray: 1600; stroke-dashoffset: 1600;
   animation: draw 1.3s cubic-bezier(.16,.9,.3,1) .05s forwards;
 }
 .sig-ch:nth-of-type(2) { animation-delay: .15s; }
