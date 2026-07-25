@@ -107,7 +107,8 @@ h2 {
   letter-spacing: 0; color: var(--voice); display: block; margin-top: .2rem;
 }
 .topic h3 .en.cool { color: var(--eeg); }
-.topic p { margin-top: .5rem; color: var(--muted); }
+.topic p { margin-top: .55rem; color: var(--ink); }
+.topic p.en-text { margin-top: .8rem; color: var(--muted); font-size: .9375rem; }
 
 /* entry lists */
 ul, ol { list-style: none; }

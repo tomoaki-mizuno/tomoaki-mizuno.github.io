@@ -32,7 +32,7 @@
     <div class="kanji">水野 友暁</div>
     <h1>Tomoaki Mizuno</h1>
     <p class="lede">脳波から音声を合成する研究と、日本語の方言アクセント変換の研究をしています。</p>
-    <p class="lede-en">Ph.D. student in speech information processing — speech synthesis from EEG, and accent conversion between Japanese dialects.</p>
+    <p class="lede-en">Ph.D. student in speech information processing — speech decoding from EEG, and accent conversion between Japanese dialects.</p>
     <p class="affil">電気通信大学 大学院情報理工学研究科 情報・ネットワーク工学専攻<br>
       <a href="https://sp.lab.uec.ac.jp/">中鹿研究室</a> 博士後期課程（2025–）</p>
     <div class="links">
@@ -49,7 +49,8 @@
       <span class="dot eeg"></span>
       <div>
         <h3>脳波からの音声合成<span class="en cool">auditory EEG-to-speech decoding</span></h3>
-        <p>頭皮に電極を貼って計測した脳波だけを手がかりに、その人が何を聴いていたかを音声として取り出します。脳波は雑音に埋もれやすく、同じ音声を聴いても日によって応答が変わるため、深層学習に音声との対応をどう学ばせるかが問題になります。日をまたいでも崩れない表現の獲得に取り組んでいます。</p>
+        <p>頭皮に電極を貼るだけで測れる脳波から、その人が聴いていた音声を作り直すことに取り組んでいます。目指すのは、声を失った人の音声コミュニケーション補助や、聴こえを返す機器の基盤技術です。声質や言語の手がかりが脳のどの領域の信号に現れるのかを調べながら、そのための日本語脳波データセットを自分たちで収録しています。</p>
+        <p class="en-text">I work on reconstructing the speech a person was listening to, using only EEG measured with electrodes placed on the scalp. The goal is groundwork for speech communication aids for people who have lost their voice, and for devices that restore hearing. I study which brain regions carry the cues to voice quality and linguistic content, and we record our own Japanese EEG dataset for this purpose.</p>
       </div>
     </div>
 
@@ -57,9 +58,11 @@
       <span class="dot voice"></span>
       <div>
         <h3>日本語方言アクセント変換<span class="en">Japanese dialectal accent conversion</span></h3>
-        <p>誰が話しているか、何を話しているかは変えず、アクセントとイントネーションだけを別の方言のものに差し替えます。自己教師あり学習で得た離散音声表現（HuBERT）を用い、対応する発話のペアを必要としない枠組みを産業技術総合研究所との共同研究で進めています。</p>
+        <p>話す内容はそのままに、言葉の抑揚だけを別の方言のものへ置き換えます。対象は標準語と茨城南部方言です。自己教師あり学習で得た離散音声表現（HuBERT）が、言語内容を残したまま抑揚を落とす性質を利用するので、学習に要るのは各方言の音声だけで、同じ文を両方言で読み上げた対応データも書き起こしも必要ありません。産業技術総合研究所との共同研究です。</p>
+        <p class="en-text">This work replaces only the pitch pattern of an utterance with that of another dialect, leaving what is said unchanged. The two dialects are standard Japanese and the southern Ibaraki dialect. It builds on a property of the discrete speech representations obtained through self-supervised learning (HuBERT): they preserve linguistic content while suppressing prosody. Training therefore needs nothing but speech in each dialect &mdash; no parallel recordings of the same sentences in both dialects, and no transcripts. Joint work with the National Institute of Advanced Industrial Science and Technology (AIST).</p>
       </div>
     </div>
+
   </section>
 
   <footer><span>tomoaki-mizuno.github.io</span><span>Chōfu, Tokyo</span></footer>
