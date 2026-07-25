@@ -38,26 +38,32 @@ a:focus-visible { outline: 2px solid var(--eeg); outline-offset: 3px; border-rad
 .lang .sep { color: var(--faint); }
 
 /* ── signature trace (top page) ───────────────────── */
-.trace {
-  margin: 0 -1.5rem; padding: 2.5rem 1.5rem 0;
+.trace { position: relative; margin: 0 -1.5rem; padding: 2.5rem 1.5rem 0; }
+/* 方眼だけを下方向にフェードさせる。波形と凡例はフェードの対象外 */
+.trace::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
   background-image:
     linear-gradient(to right, var(--grid) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
   background-size: 2rem 2rem; background-position: center;
-  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
-  mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent);
+  mask-image: linear-gradient(to bottom, #000 45%, transparent);
 }
+.trace svg, .trace .axis { position: relative; }
 .trace svg { display: block; width: 100%; height: auto; overflow: visible; }
 .sig {
-  fill: none; stroke: url(#grad); stroke-width: 2.2;
+  fill: none; stroke: url(#grad); stroke-width: 1.7;
   stroke-linecap: round; stroke-linejoin: round;
-  stroke-dasharray: 4200; stroke-dashoffset: 4200;
-  animation: draw 2.4s cubic-bezier(.16,.9,.3,1) .15s forwards;
+  stroke-dasharray: 4400; stroke-dashoffset: 4400;
+  animation: draw 2.4s cubic-bezier(.16,.9,.3,1) forwards;
 }
+.sig:nth-of-type(1) { animation-delay: .10s; }
+.sig:nth-of-type(2) { animation-delay: .20s; }
+.sig:nth-of-type(3) { animation-delay: .30s; }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 .axis {
-  display: flex; justify-content: space-between; margin-top: .3rem;
-  font-family: "JetBrains Mono", monospace; font-size: .6875rem;
+  display: flex; justify-content: space-between; margin-top: .4rem;
+  font-family: "JetBrains Mono", monospace; font-size: .6875rem; font-weight: 500;
   letter-spacing: .1em; text-transform: uppercase;
 }
 .axis .l { color: var(--eeg); }
