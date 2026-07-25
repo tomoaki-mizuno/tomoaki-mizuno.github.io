@@ -57,9 +57,13 @@ a:focus-visible { outline: 2px solid var(--eeg); outline-offset: 3px; border-rad
   stroke-dasharray: 4400; stroke-dashoffset: 4400;
   animation: draw 2.4s cubic-bezier(.16,.9,.3,1) forwards;
 }
-.sig:nth-of-type(1) { animation-delay: .10s; }
-.sig:nth-of-type(2) { animation-delay: .20s; }
-.sig:nth-of-type(3) { animation-delay: .30s; }
+.sig-ch {
+  fill: none; stroke: url(#fade); stroke-width: 1.7; stroke-linecap: round;
+  stroke-dasharray: 1400; stroke-dashoffset: 1400;
+  animation: draw 1.3s cubic-bezier(.16,.9,.3,1) .05s forwards;
+}
+.sig-ch:nth-of-type(2) { animation-delay: .15s; }
+.sig { animation-delay: .1s; }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 .axis {
   display: flex; justify-content: space-between; margin-top: .4rem;
@@ -150,5 +154,5 @@ footer { margin-top: 3.5rem; padding-top: 1rem; border-top: 1px solid var(--hair
   .rows > li { grid-template-columns: 1fr; gap: .15rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .sig { animation: none; stroke-dashoffset: 0; }
+  .sig, .sig-ch { animation: none; stroke-dashoffset: 0; }
 }
