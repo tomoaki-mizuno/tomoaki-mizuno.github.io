@@ -71,8 +71,8 @@
       <span class="dot eeg"></span>
       <div>
         <h3>脳波からの音声合成<span class="en cool">auditory EEG-to-speech decoding</span></h3>
-        <p>頭皮に電極を貼るだけで測れる脳波から、その人が聴いていた音声を作り直すことに取り組んでいます。目指すのは、声を失った人の音声コミュニケーション補助や、聴こえを返す機器の基盤技術です。声質や言語の手がかりが脳のどの領域の信号に現れるのかを調べながら、そのための日本語脳波データセットを自分たちで収録しています。</p>
-        <p class="en-text">I work on reconstructing the speech a person was listening to, using only EEG measured with electrodes placed on the scalp. The goal is groundwork for speech communication aids for people who have lost their voice, and for devices that reconstruct hearing. I study which brain regions carry the cues to voice quality and linguistic content, and we record our own Japanese EEG dataset for this purpose.</p>
+        <p>頭皮に電極を貼るだけで測れる脳波から、その人が聴いていた音声を作り直します。目指すのは、声を失った人の音声コミュニケーション補助や、聴こえを返す機器の基盤技術です。手術で脳に置く電極と違い、頭皮の脳波は目的の信号が雑音に埋もれるため、侵襲的な方法に比べてまだまだ未開拓です。そこで、同じ文を繰り返し聴かせて雑音を薄められるよう設計した日本語の脳波データセットを我々自身で収録し、波形としての音声そのものの復元に取り組んでいます。</p>
+        <p class="en-text">I reconstruct the speech a person was listening to from EEG measured with electrodes placed on the scalp. The goal is groundwork for speech communication aids for people who have lost their voice, and for devices that restore hearing. Unlike electrodes placed on the brain surgically, scalp EEG buries the signal of interest in noise, which leaves it far less explored than invasive approaches. We therefore record our own Japanese EEG dataset, designed so that repeated presentations of the same sentence can be averaged to thin out the noise, and work toward reconstructing the speech waveform itself.</p>
       </div>
     </div>
 
@@ -80,8 +80,8 @@
       <span class="dot voice"></span>
       <div>
         <h3>日本語方言アクセント変換<span class="en">Japanese dialectal accent conversion</span></h3>
-        <p>話す内容はそのままに、言葉の抑揚だけを別の方言のものへ置き換えます。対象は標準語と茨城南部方言です。自己教師あり学習で得た離散音声表現（HuBERT）が、言語内容を残したまま抑揚を落とす性質を利用するので、学習に要るのは各方言の音声だけで、同じ文を両方言で読み上げた対応データも書き起こしも必要ありません。産業技術総合研究所との共同研究です。</p>
-        <p class="en-text">This work replaces only the pitch pattern of an utterance with that of another dialect, leaving what is said unchanged. The two dialects are standard Japanese and the southern Ibaraki dialect. It builds on a property of the discrete speech representations obtained through self-supervised learning (HuBERT): they preserve linguistic content while suppressing prosody. Training therefore needs nothing but speech in each dialect &mdash; no parallel recordings of the same sentences in both dialects, and no transcripts. Joint work with the National Institute of Advanced Industrial Science and Technology (AIST).</p>
+        <p>話す内容はそのままに、言葉の抑揚だけを別の方言のものへ置き換えます。目指すのは、資源の少ない方言にまで届く音声合成とアクセント制御です。手がかりは、自己教師あり学習で得た離散音声表現（HuBERT）が、言語内容を残したまま抑揚を落とすという性質です。これを使うと、学習に要るのは各方言の音声だけで、同じ文を両方言で読み上げた対応データも書き起こしも必要ありません。産業技術総合研究所との共同研究です。</p>
+        <p class="en-text">This work replaces only the pitch pattern of an utterance with that of another dialect, leaving what is said unchanged. The goal is speech synthesis and accent control that reaches even dialects with few resources. It builds on a property of the discrete speech representations obtained through self-supervised learning (HuBERT): they preserve linguistic content while suppressing prosody. Training therefore needs nothing but speech in each dialect &mdash; no parallel recordings of the same sentences in both dialects, and no transcripts. Joint work with the National Institute of Advanced Industrial Science and Technology (AIST).</p>
       </div>
     </div>
 
